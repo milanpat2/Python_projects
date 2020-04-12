@@ -34,7 +34,18 @@ def makeMove(): # make a next move
     global x
     if CP == "You":
         print("Your turn (X)")
-        move = int(input("Enter from 1 to 9: ")) - 1
+        move = int(input("Enter number from 1 to 9 to place X: ")) - 1
+
+        if move in range(0, 9):
+            pass
+        else:
+            move = int(input("Invalid input, Enter number from 1 to 9: ")) - 1
+            while True:
+                if move in range(0, 9):
+                    break
+                else:
+                    move = int(input("Invalid input again, Enter number from 1 to 9: ")) - 1
+
         if board[move] == "-":
             board[move] = "X"
             play_board()
@@ -42,12 +53,24 @@ def makeMove(): # make a next move
             x = True
             while x:
                 move = int(input("Invalid input, Please enter from 1 to 9 on empty spaces: ")) - 1
+
+                if move in range(0, 9):
+                    pass
+                else:
+                    move = int(input("Invalid input, Enter from 1 to 9: ")) - 1
+                    while True:
+                        if move in range(0, 9):
+                            break
+                        else:
+                            move = int(input("Invalid input again, Enter from 1 to 9: ")) - 1
+
                 if board[move] == "-":
                     x = False
                 else:
                     x = True
             board[move] = "X"
             play_board()
+
     else:
         print("Computer's turn (O)")
         time.sleep(1)
