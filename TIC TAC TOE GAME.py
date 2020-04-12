@@ -73,11 +73,86 @@ def makeMove(): # make a next move
 
     else:
         print("Computer's turn (O)")
-        time.sleep(1)
-        move = random.randrange(1, 10) - 1
-        if board[move] == "-":
-            board[move] = "O"
+        if board[0] == "X" and board[3] == "X" and board[6] == "-":
+            board[6] = "O"
             play_board()
+        elif board[0] == "X" and board[6] == "X" and board[3] == "-":
+            board[3] = "O"
+            play_board()
+        elif board[3] == "X" and board[6] == "X" and board[0] == "-":
+            board[0] = "O"
+            play_board()
+
+        elif board[1] == "X" and board[4] == "X" and board[7] == "-":
+            board[7] = "O"
+            play_board()
+        elif board[1] == "X" and board[7] == "X" and board[4] == "-":
+            board[4] = "O"
+            play_board()
+        elif board[4] == "X" and board[7] == "X" and board[1] == "-":
+            board[1] = "O"
+            play_board()
+
+        elif board[2] == "X" and board[5] == "X" and board[8] == "-":
+            board[8] = "O"
+            play_board()
+        elif board[2] == "X" and board[8] == "X" and board[5] == "-":
+            board[5] = "O"
+            play_board()
+        elif board[5] == "X" and board[8] == "X" and board[2] == "-":
+            board[2] = "O"
+            play_board()
+
+        elif board[1] == "X" and board[0] == "X" and board[2] == "-":
+            board[2] = "O"
+            play_board()
+        elif board[2] == "X" and board[0] == "X" and board[1] == "-":
+            board[1] = "O"
+            play_board()
+        elif board[1] == "X" and board[2] == "X" and board[0] == "-":
+            board[0] = "O"
+            play_board()
+
+        elif board[3] == "X" and board[5] == "X" and board[4] == "-":
+            board[4] = "O"
+            play_board()
+        elif board[3] == "X" and board[4] == "X" and board[5] == "-":
+            board[5] = "O"
+            play_board()
+        elif board[4] == "X" and board[5] == "X" and board[3] == "-":
+            board[3] = "O"
+            play_board()
+
+        elif board[6] == "X" and board[7] == "X" and board[8] == "-":
+            board[8] = "O"
+            play_board()
+        elif board[6] == "X" and board[8] == "X" and board[7] == "-":
+            board[7] = "O"
+            play_board()
+        elif board[7] == "X" and board[8] == "X" and board[6] == "-":
+            board[6] = "O"
+            play_board()
+
+        elif board[0] == "X" and board[4] == "X" and board[8] == "-":
+            board[8] = "O"
+            play_board()
+        elif board[4] == "X" and board[8] == "X" and board[0] == "-":
+            board[0] = "O"
+            play_board()
+        elif board[0] == "X" and board[8] == "X" and board[4] == "-":
+            board[4] = "O"
+            play_board()
+
+        elif board[2] == "X" and board[4] == "X" and board[6] == "-":
+            board[6] = "O"
+            play_board()
+        elif board[2] == "X" and board[6] == "X" and board[4] == "-":
+            board[4] = "O"
+            play_board()
+        elif board[4] == "X" and board[6] == "X" and board[2] == "-":
+            board[2] = "O"
+            play_board()
+
         else:
             x = True
             while x:
