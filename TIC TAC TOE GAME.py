@@ -73,7 +73,82 @@ def makeMove(): # make a next move
 
     else:
         print("Computer's turn (O)")
-        if board[0] == "X" and board[3] == "X" and board[6] == "-":
+        # attacking moves by computer
+        if board[0] == "O" and board[3] == "O" and board[6] == "-":
+            board[6] = "O"
+            play_board()
+        elif board[0] == "O" and board[6] == "O" and board[3] == "-":
+            board[3] = "O"
+            play_board()
+        elif board[3] == "O" and board[6] == "O" and board[0] == "-":
+            board[0] = "O"
+            play_board()
+        elif board[1] == "O" and board[4] == "O" and board[7] == "-":
+            board[7] = "O"
+            play_board()
+        elif board[1] == "O" and board[7] == "O" and board[4] == "-":
+            board[4] = "O"
+            play_board()
+        elif board[4] == "O" and board[7] == "O" and board[1] == "-":
+            board[1] = "O"
+            play_board()
+        elif board[2] == "O" and board[5] == "O" and board[8] == "-":
+            board[8] = "O"
+            play_board()
+        elif board[2] == "O" and board[8] == "O" and board[5] == "-":
+            board[5] = "O"
+            play_board()
+        elif board[5] == "O" and board[8] == "O" and board[2] == "-":
+            board[2] = "O"
+            play_board()
+        elif board[1] == "O" and board[0] == "O" and board[2] == "-":
+            board[2] = "O"
+            play_board()
+        elif board[2] == "O" and board[0] == "O" and board[1] == "-":
+            board[1] = "O"
+            play_board()
+        elif board[1] == "O" and board[2] == "O" and board[0] == "-":
+            board[0] = "O"
+            play_board()
+        elif board[3] == "O" and board[5] == "O" and board[4] == "-":
+            board[4] = "O"
+            play_board()
+        elif board[3] == "O" and board[4] == "O" and board[5] == "-":
+            board[5] = "O"
+            play_board()
+        elif board[4] == "O" and board[5] == "O" and board[3] == "-":
+            board[3] = "O"
+            play_board()
+        elif board[6] == "O" and board[7] == "O" and board[8] == "-":
+            board[8] = "O"
+            play_board()
+        elif board[6] == "O" and board[8] == "O" and board[7] == "-":
+            board[7] = "O"
+            play_board()
+        elif board[7] == "O" and board[8] == "O" and board[6] == "-":
+            board[6] = "O"
+            play_board()
+        elif board[0] == "O" and board[4] == "O" and board[8] == "-":
+            board[8] = "O"
+            play_board()
+        elif board[4] == "O" and board[8] == "O" and board[0] == "-":
+            board[0] = "O"
+            play_board()
+        elif board[0] == "O" and board[8] == "O" and board[4] == "-":
+            board[4] = "O"
+            play_board()
+        elif board[2] == "O" and board[4] == "O" and board[6] == "-":
+            board[6] = "O"
+            play_board()
+        elif board[2] == "O" and board[6] == "O" and board[4] == "-":
+            board[4] = "O"
+            play_board()
+        elif board[4] == "O" and board[6] == "O" and board[2] == "-":
+            board[2] = "O"
+            play_board()
+
+        # defending moves by computer
+        elif board[0] == "X" and board[3] == "X" and board[6] == "-":
             board[6] = "O"
             play_board()
         elif board[0] == "X" and board[6] == "X" and board[3] == "-":
@@ -82,7 +157,6 @@ def makeMove(): # make a next move
         elif board[3] == "X" and board[6] == "X" and board[0] == "-":
             board[0] = "O"
             play_board()
-
         elif board[1] == "X" and board[4] == "X" and board[7] == "-":
             board[7] = "O"
             play_board()
@@ -92,7 +166,6 @@ def makeMove(): # make a next move
         elif board[4] == "X" and board[7] == "X" and board[1] == "-":
             board[1] = "O"
             play_board()
-
         elif board[2] == "X" and board[5] == "X" and board[8] == "-":
             board[8] = "O"
             play_board()
@@ -102,7 +175,6 @@ def makeMove(): # make a next move
         elif board[5] == "X" and board[8] == "X" and board[2] == "-":
             board[2] = "O"
             play_board()
-
         elif board[1] == "X" and board[0] == "X" and board[2] == "-":
             board[2] = "O"
             play_board()
@@ -112,7 +184,6 @@ def makeMove(): # make a next move
         elif board[1] == "X" and board[2] == "X" and board[0] == "-":
             board[0] = "O"
             play_board()
-
         elif board[3] == "X" and board[5] == "X" and board[4] == "-":
             board[4] = "O"
             play_board()
@@ -122,7 +193,6 @@ def makeMove(): # make a next move
         elif board[4] == "X" and board[5] == "X" and board[3] == "-":
             board[3] = "O"
             play_board()
-
         elif board[6] == "X" and board[7] == "X" and board[8] == "-":
             board[8] = "O"
             play_board()
@@ -132,7 +202,6 @@ def makeMove(): # make a next move
         elif board[7] == "X" and board[8] == "X" and board[6] == "-":
             board[6] = "O"
             play_board()
-
         elif board[0] == "X" and board[4] == "X" and board[8] == "-":
             board[8] = "O"
             play_board()
@@ -142,7 +211,6 @@ def makeMove(): # make a next move
         elif board[0] == "X" and board[8] == "X" and board[4] == "-":
             board[4] = "O"
             play_board()
-
         elif board[2] == "X" and board[4] == "X" and board[6] == "-":
             board[6] = "O"
             play_board()
@@ -213,7 +281,7 @@ def play_game(): # play_game is a main function to run the game
         checkWin() # Check if win
         checkTie() # Check if tie
         flipPlayer() # To change the player's turn
-        time.sleep(2)
+        time.sleep(1)
 
 
 play_game()
