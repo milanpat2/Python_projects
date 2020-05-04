@@ -1,4 +1,4 @@
-main.py is the main module that starts the game.
+main.py is the main module that starts the game when executed with the created object.
 AI.py is the module from which AI will play the move.
 Player.py module is for the player's move.
 Board.py will validate all the moves and update the game board.
